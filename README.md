@@ -23,7 +23,7 @@ To demonstrate my technical communication skills, I authored an article breaking
 ## Task 2: Bifrost Installation Journey
 OpenStack Bifrost is a powerful tool, but installing it on custom local hardware with nested virtualization presents unique challenges. I documented my complete installation journey, focusing heavily on the troubleshooting and debugging processes.
 
-* **Read the Full Report:** [Trial by Fire: My Experience Installing and Debugging OpenStack Bifrost](https://github.com/kariukikinyanjui/ironic-outreachy-application/blob/main/reports/Bifrost_report.md)
+* **Read the Full Report:** [Trial by Fire: My Experience Installing and Debugging OpenStack Bifrost](https://github.com/kariukikinyanjui/ironic-outreachy-application/blob/main/reports/bifrost_installation_report.md)
 
 ### Highlights from the Report:
 Rather than a perfect automated run, my deployment required hands-on architectural intervention. Key debugging scenarios included:
