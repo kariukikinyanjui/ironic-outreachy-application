@@ -11,7 +11,7 @@ This repository servers as a centralized portfolio for my Outreachy application 
 
 ## Quick Links
 * [Task 1: Technical Article](https://medium.com/@kariuki_kinyanjui/from-freezing-data-centers-to-cloud-apis-demystifying-openstack-ironic-bb006c918707)
-* [Task 2: Bifrost Installation & Debugging Report](https://github.com/kariukikinyanjui/ironic-outreachy-application/blob/main/reports/Bifrost_report.md)
+* [Task 2: Bifrost Installation & Debugging Report](https://github.com/kariukikinyanjui/ironic-outreachy-application/blob/main/reports/bifrost_installation_report.md)
 * [Task 3: Gerrit Workflow Patch](https://review.opendev.org/c/opendev/sandbox/+/984206)
 
 ## Task 1: Demystifying OpenStack Ironic
