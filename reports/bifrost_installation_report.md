@@ -47,7 +47,7 @@ To bypass the ISP-level routing restriction, I manually intervened by adjusting 
 ## Challenge 3: The Ghost Image and the Infinite Loop
 
 **The Problem**
-The most complex issue occured during the actual bare-metal provisioning phase. The virtual machine (`testvm`) powered on via IPMI, loaded the Ironic Python Agent(IPA) into RAM, but then became permanently stuck in the `deploying`(wait call-back) state until the deployment eventually timed out.
+The most complex issue occurred during the actual bare-metal provisioning phase. The virtual machine (`testvm`) powered on via IPMI, loaded the Ironic Python Agent(IPA) into RAM, but then became permanently stuck in the `deploying`(wait call-back) state until the deployment eventually timed out.
 
 **The Investigation**
 
