@@ -61,6 +61,7 @@ I discovered the agent was trapped in an infinite loop, constantly requesting `d
 **The Evidence**
 ![The OpenStack Baremetal Node List showing the node hopelessly stalled in the "deploying" state.](https://github.com/kariukikinyanjui/ironic-outreachy-application/blob/main/assets/04-httpboot-infinite-loop.png)
 
+---
 ![Tailing the web server logs revealed the smoking gun, the Ironic Python Agent repeatedly requesting the image due to a checksum validation failure.](https://github.com/kariukikinyanjui/ironic-outreachy-application/blob/main/assets/03-ironic-node-timeout.png)
 
 **The Resolution**
