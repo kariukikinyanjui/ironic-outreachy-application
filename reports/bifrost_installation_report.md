@@ -8,12 +8,12 @@
 ## Overview
 OpenStack Bifrost is a set of Ansible playbooks that automates the deployment of a standalone OpenStack Ironic bare-metal provisioning environment. While automated tools are powerful, real-world infrastructure often presents unique environmental challenges.
 
-This report documents my hands-on experience installing Bifrost on local hardware using nested virtualization. Rather tha presenting a sanitized, perfect run, this document highlights the actual networking, state-machine, and routing hurdles I encountered, alongside the native Linux debugging tools I used to overcome them.
+This report documents my hands-on experience installing Bifrost on local hardware using nested virtualization. Rather than presenting a sanitized, perfect run, this document highlights the actual networking, state-machine, and routing hurdles I encountered, alongside the native Linux debugging tools I used to overcome them.
 
 ## Challenge 1: The Port 8080 Socket Conflict
 
 **The Problem**
-During the execution of the `test-bifrost.sh` deployment script, the Ansible playbook threw a fatal error while attempting to configure and start the `nginx` service for the `httpboot` directory. Nginx report an `[emerg] bind () to 0.0.0.0:8080 failed (98: Address already in use`) error.
+During the execution of the `test-bifrost.sh` deployment script, the Ansible playbook threw a fatal error while attempting to configure and start the `nginx` service for the `httpboot` directory. Nginx reports an `[emerg] bind () to 0.0.0.0:8080 failed (98: Address already in use`) error.
 
 **The Investigation**
 Ansible abstracts away system-level conflicts, so I dropped down to the Linux command line to investigate socket bindings. I utilized the `ss` (socket statistics) utility to track down the rogue process hoarding the port:
@@ -32,7 +32,7 @@ I identified the process as a stale Python HTTP server from an earlier manual te
 ## Challenge 2: The Global Routing Drop
 
 **The Problem**
-As the Bifrost playbook progressed to the repository cloning phase, the process suddelnly halted. The deployment script threw a fatal Git fetch error, terminating the playbook entirely.
+As the Bifrost playbook progressed to the repository cloning phase, the process suddenly halted. The deployment script threw a fatal Git fetch error, terminating the playbook entirely.
 
 **The Investigation**
 Analyzing the Ansible JSON traceback revealed that the `git fetch` module failed with `Failed to connect to opendev.org port 443 after 2ms: Couldn't connect to server`. Further network tracing indicated that my ISP was actively dropping or resetting specific routing paths to OpenDev's infrastructure.
@@ -47,7 +47,7 @@ To bypass the ISP-level routing restriction, I manually intervened by adjusting 
 ## Challenge 3: The Ghost Image and the Infinite Loop
 
 **The Problem**
-The most complex issue occurred during the actual bare-metal provisioning phase. The virtual machine (`testvm`) powered on via IPMI, loaded the Ironic Python Agent(IPA) into RAM, but then became permanently stuck in the `deploying`(wait call-back) state until the deployment eventually timed out.
+The most complex issue occurred during the actual bare-metal provisioning phase. The virtual machine (`testvm1`) powered on via IPMI, loaded the Ironic Python Agent(IPA) into RAM, but then became permanently stuck in the `deploying`(wait call-back) state until the deployment eventually timed out.
 
 **The Investigation**
 
