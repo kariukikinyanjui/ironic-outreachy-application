@@ -59,6 +59,7 @@ tail -f /var/lib/ironic/httpboot/httpboot_loop.log
 I discovered the agent was trapped in an infinite loop, constantly requesting `deployment_image.qcow2`. It was downloading the image, checking the SHA256 hash, failing the validation, discarding the image, and asking for it again.
 
 **The Evidence**
+
 ![The OpenStack Baremetal Node List showing the node hopelessly stalled in the "deploying" state.](https://github.com/kariukikinyanjui/ironic-outreachy-application/blob/main/assets/04-httpboot-infinite-loop.png)
 
 ---
