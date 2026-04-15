@@ -5,9 +5,9 @@
 
 **Location:** Nairobi, Kenya
 
-Welcome to my application repository for the OpenStack Ironic project (Outreachy May 2026). As a backend engineer specializing in Python and custom infrastructure, I approach system design with logician's mindset. I am passioinate about bare-metal provisioning, high-performance systems, and cloud architecture.
+Welcome to my application repository for the OpenStack Ironic project (Outreachy May 2026). As a backend engineer specializing in Python and custom infrastructure, I approach system design with a logician's mindset. I am passionate about bare-metal provisioning, high-performance systems, and cloud architecture.
 
-This repository servers as a centralized portfolio for my Outreachy application tasks, demonstrating my technical writing, systems debugging, and version control capabilities.
+This repository serves as a centralized portfolio for my Outreachy application tasks, demonstrating my technical writing, systems debugging, and version control capabilities.
 
 ## Quick Links
 * [Task 1: Technical Article](https://medium.com/@kariuki_kinyanjui/from-freezing-data-centers-to-cloud-apis-demystifying-openstack-ironic-bb006c918707)
@@ -30,7 +30,7 @@ OpenStack Bifrost is a powerful tool, but installing it on custom local hardware
 Rather than a perfect automated run, my deployment required hands-on architectural intervention. Key debugging scenarios included:
 1. **Zombie Processes & Sockets:** Resolving an Nginx `8080` port conflict by investigating socket bindings (`ss -apn`) and spinning up a temporary Python HTTP server.
 2. **Global Routing Resets:** Bypassing global firewall/routing drops to `opendev.org` from my ISP by manually cloning dependencies from GitHub mirrors.
-3. **The Checksum Infinite Loop:** Diagnosing a deployment timeout by tailiing web server logs to catch the Ironic Python Agent (IPA) stuck in an infinte download loop due to a SHA256 checksum mismatch.
+3. **The Checksum Infinite Loop:** Diagnosing a deployment timeout by tailing web server logs to catch the Ironic Python Agent (IPA) stuck in an infinite download loop due to a SHA256 checksum mismatch.
 4. **Successful Deployment:** Ultimately achieving an `active` node state after correcting the `baremetal-nodes.json` inventory and forcing a node rebuild.
 (*Note: The full report includes terminal screenshots and log evidence of the debugging process.)
 
@@ -39,5 +39,5 @@ To prove my readiness to contribute to the OpenStack ecosystem, I successfully n
 * **View my Sandbox Patch:** [patch](https://review.opendev.org/c/opendev/sandbox/+/984206)
 * **Commit Details:** Submitted a dummy patch to verify the Gerrit workflow and the automatic generation of the `Change-Id`.
 
-**Thank you**
+
 Thank you to the Ironic mentors for taking the time to review my application. Navigating the Bifrost matrix, analyzing database states, and utilizing the Gerrit workflow has been an incredible learning experience, and I am highly motivated to bring this persistence to the OpenStack community.
