@@ -39,5 +39,9 @@ To prove my readiness to contribute to the OpenStack ecosystem, I successfully n
 * **View my Sandbox Patch:** [patch](https://review.opendev.org/c/opendev/sandbox/+/984206)
 * **Commit Details:** Submitted a dummy patch to verify the Gerrit workflow and the automatic generation of the `Change-Id`.
 
+## Live Environment Showcase
+To demonstrate my working Bifrost nested virtualization environment, I recorded a brief terminal session navigating the OpenStack CLI, verifying the Ironic Conductor, and inspecting the active bare-metal node.
+
+[![asciicast](https://asciinema.org/a/2gFxAHH5uMIzXWGd].svg)(https://asciinema.org/a/2gFxAHH5uMIzXWGd)
 
 Thank you to the Ironic mentors for taking the time to review my application. Navigating the Bifrost matrix, analyzing database states, and utilizing the Gerrit workflow has been an incredible learning experience, and I am highly motivated to bring this persistence to the OpenStack community.
