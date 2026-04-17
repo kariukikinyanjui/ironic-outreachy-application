@@ -42,6 +42,6 @@ To prove my readiness to contribute to the OpenStack ecosystem, I successfully n
 ## Live Environment Showcase
 To demonstrate my working Bifrost nested virtualization environment, I recorded a brief terminal session navigating the OpenStack CLI, verifying the Ironic Conductor, and inspecting the active bare-metal node.
 
-[![asciicast](https://asciinema.org/a/2gFxAHH5uMIzXWGd].svg)(https://asciinema.org/a/2gFxAHH5uMIzXWGd)
+[![asciicast](https://asciinema.org/a/2gFxAHH5uMIzXWGd.svg)](https://asciinema.org/a/2gFxAHH5uMIzXWGd)
 
 Thank you to the Ironic mentors for taking the time to review my application. Navigating the Bifrost matrix, analyzing database states, and utilizing the Gerrit workflow has been an incredible learning experience, and I am highly motivated to bring this persistence to the OpenStack community.
